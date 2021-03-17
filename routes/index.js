@@ -7,7 +7,15 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/images', function(req, res, next) {
-  res.send({ title: 'Whatcha Doin?' });
+  res.send('Whatcha Doin?');
+});
+
+router.get('/github', function(req, res, next) {
+  res.redirect('https://github.com/wheeless');
+});
+
+router.get('/instagram', function(req, res, next) {
+  res.redirect('https://www.instagram.com/kwheel_s/');
 });
 
 module.exports = router;
