@@ -1,19 +1,19 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* GET Home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Coming Soon!' });
+  res.render('comingsoon', { title: 'Coming Soon!' });
 });
-
+/* GET Image page. */
 router.get('/images', function(req, res, next) {
   res.send('Whatcha Doin?');
 });
-
+/* GET Github page. */
 router.get('/github', function(req, res, next) {
   res.redirect('https://github.com/wheeless');
 });
-
+/* GET Instagram page. */
 router.get('/instagram', function(req, res, next) {
   res.redirect('https://www.instagram.com/kwheel_s/');
 });
