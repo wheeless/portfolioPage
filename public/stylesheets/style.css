@@ -1,3 +1,9 @@
+#headerImage {
+  max-height: auto;
+  max-width: 700px;
+  margin-bottom: 5px;
+}
+
 html {
   font-size: 100%;
   height: 100%;
@@ -278,3 +284,4 @@ b.light-color {
 .main-area .social-btn>li>a:hover:after {
   transform: translateX(100%)
 }
+

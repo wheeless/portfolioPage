@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var usersRouter = require('./routes/build');
 
 var app = express();
 
@@ -21,12 +22,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/u', usersRouter);
+app.use('/build', indexRouter);
+
 
 app.use(function (req, res) {
   res.status(404);
   res.render('404.hbs', {
     // layout: 'errorPages.handlebars',
-    title: '404: File Not Found'
+    title: '404: Page Not Found'
   });
 });
 
