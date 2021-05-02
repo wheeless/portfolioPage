@@ -18,4 +18,8 @@ router.get('/instagram', function(req, res, next) {
   res.redirect('https://www.instagram.com/kwheel_s/');
 });
 
+router.get('/linkedin', function(req, res, next) {
+  res.redirect('https://www.linkedin.com/in/kylewheeless/');
+});
+
 module.exports = router;
