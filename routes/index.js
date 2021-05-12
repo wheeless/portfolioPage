@@ -9,9 +9,15 @@ router.get('/', function(req, res, next) {
 router.get('/utilities', function(req, res, next) {
   res.render('utility', { title: 'Our Utilities' });
 });
+
+/* Shrek page */
+router.get('/shrek', function(req, res, next) {
+  res.render('shrek', { title: 'DONKEY!' });
+});
+
 /* GET Image page. */
 router.get('/images', function(req, res, next) {
-  res.send('Whatcha Doin?');
+  res.redirect('/shrek');
 });
 /* GET Github page. */
 router.get('/github', function(req, res, next) {
