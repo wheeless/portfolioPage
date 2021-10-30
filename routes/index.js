@@ -33,5 +33,9 @@ router.get('/linkedin', function (req, res, next) {
 router.get('/meeting', function (req, res, next) {
   res.redirect('https://calendly.com/kyle-wheeless/');
 });
+/* GET Zoom page. */
+router.get('/zoom', function (req, res, next) {
+  res.redirect('https://exeterlms.zoom.us/my/kyle.w');
+});
 
 module.exports = router;
