@@ -13,7 +13,11 @@
     "express": "~4.16.1",
     "hbs": "^4.1.2",
     "http-errors": "~1.6.3",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "shortid": "^2.2.16",
+    "valid-url": "^1.0.9",
+    "mongoose": "^6.0.12",
+    "config": "^3.3.6"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",
