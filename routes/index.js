@@ -38,9 +38,23 @@ router.get('/zoom', function (req, res, next) {
   res.redirect('https://exeterlms.zoom.us/my/kyle.w');
 });
 
+// router.get('/:shortUrl', async (req, res) => {
+//   const urlShort = req.params.shortUrl;
+//   var fullUrl = `https://api.hostmonkey.io/api/v1/links/${urlShort}`;
+
+//   if (fullUrl) {
+//     res.redirect(fullUrl);
+//   } else {
+//     res.render('error', {
+//       title: 'Error',
+//       message: 'URL not found',
+//     });
+//   }
+// });
+
 router.get('/:shortUrl', async (req, res) => {
   const urlShort = req.params.shortUrl;
-  var fullUrl = `https://api.hostmonkey.io/api/v1/links/${urlShort}`;
+  var fullUrl = `http://127.0.0.1/api/v1/links/${urlShort}?APIKey=${process.env.API_KEY}`;
 
   if (fullUrl) {
     res.redirect(fullUrl);
@@ -51,20 +65,5 @@ router.get('/:shortUrl', async (req, res) => {
     });
   }
 });
-
-// router.get('/:shortUrl', async (req, res) => {
-//   try {
-//     const url = await Url.findOne({ shortUrl: req.params.shortUrl });
-
-//     if (url) {
-//       return res.redirect(url.longUrl);
-//     } else {
-//       return res.status(404).json('No url found');
-//     }
-//   } catch (err) {
-//     console.error(err);
-//     res.status(500).json('Server error');
-//   }
-// });
 
 module.exports = router;
